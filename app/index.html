@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- header start -->
+	<div class="fixed-to-top">
+		<header class="header">
+			<div class="container flex-container">
+				<button class="add-task">
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="user-nav">
+					<a href="#"><i class="icon icon-user"></i></a>
+					<a href="#"><i class="icon icon-logout"></i></a>
+				</nav>
+			</div>
+		</header>
+		<div class="toggle-task-type">
+			<div class="container">
+				<div class="toggle-task-list">
+					<a class="active" href="#">Активные задачи</a>
+					<a href="#">Все задачи</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header end -->
+	<!-- main snart -->
+	<main>
+		<div class="task-content" id="active-task">
+			<div class="container">
+				<div class="task-day">
+					<span class="day">09</span>
+					<span class="month">фев</span>
+				</div>
+				<div class="all-task-wrap">
+					<!-- one task start-->
+					<div class="task open">
+						<div class="to-do-time">9:00</div>
+						<div class="task-header flex-container">
+							<span class="icon icon-arrow"></span>
+							<div class="short-task-text">some text...</div>
+							<span class="icon icon-cancel"></span>
+						</div>
+						<div class="task-content-wrap">
+							<div class="time-row flex-container">
+								<div class="task-icon">
+									<span>class="icon icon-time"</span>
+								</div>
+								<span class="time">9:00</span>
+								<div class="task-icon">
+									<span class="icon icon-bell"></span>
+								</div>
+							</div>
+							<div class="task-text-row">
+								<div class="task-icon">
+									<span class="icon icon-list"></span>
+								</div>
+								<div class="text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia minus, alias harum eum debitis doloribus, voluptas facere mollitia culpa, quas quos fugit possimus! Numquam voluptas, sunt, soluta fugiat mollitia a!	
+								</div>
+							</div>
+							<div class="task-chek-row"></div>
+							<div class="task-edit-row"></div>
+						</div>
+					</div>
+					<!-- one task end -->
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- main end -->
+</body>
+</html>
