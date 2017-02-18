@@ -295,7 +295,7 @@ main {
   padding: 1em 2em;
   color: #fff; }
   .task-day .day {
-    font-size: 3.5em;
+    font-size: 3.6em;
     font-family: 'sf_ui_displaybold'; }
   .task-day .month {
     font-size: 1.8em; }
@@ -305,21 +305,30 @@ main {
 
 .task {
   width: 100%;
-  width: 5.4em;
+  padding-left: 5.4em;
   position: relative;
   max-width: -webkit-calc( 600px + 5.4em);
   max-width: calc( 600px + 5.4em); }
-  .task:open .task-content-wrap {
+  .task.open .task-content-wrap {
     display: block; }
-  .task .task-header {
+  .task.open .task-header {
     -webkit-border-radius: 1em 1em 0 0;
-            border-radius: 1em 1em 0 0;
+            border-radius: 1em 1em 0 0; }
+  .task.success .task-header {
+    background: #7cbb00; }
+  .task.worning .task-header {
+    background: #ff5201; }
+  .task .task-header {
     padding: 1.5em;
-    border: #00a2f4;
+    background: #ffbb00;
     -webkit-border-radius: 1em;
             border-radius: 1em;
     color: #fff;
     font-family: 'sf_ui_textlight';
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -330,12 +339,14 @@ main {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
-    .task .task-header .icon-arow {
+    .task .task-header .icon-arrow {
       font-size: .6em; }
     .task .task-header .icon-cancel {
-      font-size: 2em; }
+      font-size: 2em;
+      margin-top: -8px; }
   .task .task-content-wrap {
     display: none;
+    padding: 1.5em;
     -webkit-border-radius: 0 0 1em 1em;
             border-radius: 0 0 1em 1em;
     background: #fff;
@@ -343,8 +354,10 @@ main {
     font-family: 'sf_ui_textlight';
     font-size: 1.4em;
     line-height: 1.3em;
-    -webkit-box-shadow: 0 5px 16px 5px rgba(0, 0, 0, 0.8);
-            box-shadow: 0 5px 16px 5px rgba(0, 0, 0, 0.8); }
+    -webkit-box-shadow: 0px 5px 16px 5px rgba(0, 2, 3, 0.2);
+            box-shadow: 0px 5px 16px 5px rgba(0, 2, 3, 0.2); }
+    .task .task-content-wrap > * + * {
+      margin-top: 1em; }
     .task .task-content-wrap .task-icon {
       font-size: 1.43em;
       width: 20px; }
@@ -356,3 +369,29 @@ main {
       .task .task-content-wrap .time-row .time {
         width: 90%;
         padding-left: 5px; }
+    .task .task-content-wrap .task-text-row .taxt {
+      width: 90%;
+      padding-left: 5px; }
+
+.to-do-time {
+  height: 3.3333em;
+  width: 3.3333em;
+  font-size: 1.2em;
+  background: #00a2f4;
+  color: #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
