@@ -143,10 +143,26 @@ main{
 			}
 		}
 		.task-text-row{
-			.taxt{
+			.text{
 				width: 90%;
 				padding-left: 5px;
 			}
+		}
+		.task-check-row{
+			width: 90%;
+			input{
+				display: none;
+			}
+			label{
+				font-family: 'sf_ui_textlight';
+				
+    			font-size: .7em;
+				
+			}
+		}
+		&.task-edit-row{
+			display: flex;
+			itself-items: flex-end;
 		}
 	}
 }

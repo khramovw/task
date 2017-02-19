@@ -369,9 +369,22 @@ main {
       .task .task-content-wrap .time-row .time {
         width: 90%;
         padding-left: 5px; }
-    .task .task-content-wrap .task-text-row .taxt {
+    .task .task-content-wrap .task-text-row .text {
       width: 90%;
       padding-left: 5px; }
+    .task .task-content-wrap .task-check-row {
+      width: 90%; }
+      .task .task-content-wrap .task-check-row input {
+        display: none; }
+      .task .task-content-wrap .task-check-row label {
+        font-family: 'sf_ui_textlight';
+        font-size: .7em; }
+    .task .task-content-wrap.task-edit-row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      itself-items: flex-end; }
 
 .to-do-time {
   height: 3.3333em;
