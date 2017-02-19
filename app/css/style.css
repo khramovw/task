@@ -383,12 +383,27 @@ main {
       padding-left: 5px; }
     .task .task-content-wrap .task-check-row {
       width: 90%; }
-      .task .task-content-wrap .task-check-row input {
+      .task .task-content-wrap .task-check-row input[type="checkbox"] {
         display: none; }
-      .task .task-content-wrap .task-check-row label {
-        font-family: 'sf_ui_textlight';
-        padding-left: 5px;
-        font-size: 1em; }
+        .task .task-content-wrap .task-check-row input[type="checkbox"] + label {
+          cursor: pointer;
+          opacity: 0.8;
+          font-size: 15px; }
+          .task .task-content-wrap .task-check-row input[type="checkbox"] + label::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            -webkit-border-radius: 2px;
+                    border-radius: 2px;
+            background: #FFF;
+            -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.32) inset;
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.32) inset;
+            margin-right: 10px; }
+        .task .task-content-wrap .task-check-row input[type="checkbox"]:checked + label::before {
+          background: #fff url("../img/checboxchecedbg.png") no-repeat;
+          background-position-y: 5px;
+          background-position-x: 2px; }
     .task .task-content-wrap .task-edit-row {
       display: -webkit-box;
       display: -webkit-flex;
