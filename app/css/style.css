@@ -301,7 +301,16 @@ main {
     font-size: 1.8em; }
 
 .all-task-wrap {
-  padding: 4em 0; }
+  padding: 4em 0;
+  position: relative; }
+  .all-task-wrap:before {
+    content: '';
+    display: inline-block;
+    border: 2px dashed #00a2f4;
+    position: absolute;
+    top: 4em;
+    left: 1.8em;
+    bottom: 0; }
 
 .task {
   width: 100%;
@@ -378,13 +387,17 @@ main {
         display: none; }
       .task .task-content-wrap .task-check-row label {
         font-family: 'sf_ui_textlight';
-        font-size: .7em; }
-    .task .task-content-wrap.task-edit-row {
+        padding-left: 5px;
+        font-size: 1em; }
+    .task .task-content-wrap .task-edit-row {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      itself-items: flex-end; }
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
 
 .to-do-time {
   height: 3.3333em;
