@@ -229,3 +229,29 @@ main{
 	justify-content: center;
 	align-items: center;
 }
+
+// overlay
+
+.overlay{
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.83);
+    position: fixed;
+    z-index: 99999;
+}
+.edit-task{
+	background-color: #fff;
+	width: 100%;
+	padding: 5em 0;
+	position: fixed;
+	min-height: 50vh;
+	z-index: 999999;
+	bottom: 0;
+	.title{
+		font-size: 1.8em;
+		color: #767676;
+		margin-bottom: 4em;
+	}
+}
