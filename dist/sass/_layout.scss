@@ -249,9 +249,63 @@ main{
 	min-height: 50vh;
 	z-index: 999999;
 	bottom: 0;
+	.input-group{
+		&.flex-container{
+			flex-direction: column;
+			@media (min-width: 1024px){
+				flex-direction: row;
+			}
+		}
+	}
 	.title{
 		font-size: 1.8em;
 		color: #767676;
 		margin-bottom: 4em;
+	}
+	.icon-bell{
+		font-size: 2em;
+		color: $generalColor;
+		margin-right: 1.3em;
+	}
+	.task-bell{
+		display: flex;
+		align-items: center;
+		font-size: 1.6em;
+		color: #404040;
+	}
+	input{
+		font-size: 3em;
+		margin-top: 2em;
+		padding-left: 2.3em;
+		@media (min-width: 1024px){
+			margin-top: 0;
+			margin-left: 2em;
+			padding-left: 0;
+		}
+	}
+	.textarea-wrap{
+		display: flex;
+		flex-direction: column;
+		label{
+			font-size: 1.4em;
+			color: #424242;
+			order: 1;
+		}
+		textarea{
+			border-bottom: 1px solid #9d9d9d;
+			width: 100%;
+			max-height: 6em;
+			order: 2;
+			&:focus{
+				border-color: $generalColor;
+				& + label{
+					color: $generalColor;
+				}
+			}
+		}
+		.symbol-count{
+			order: 3;
+			align-self: flex-end;
+		}
 	}
 }
