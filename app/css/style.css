@@ -470,22 +470,49 @@ main {
   width: 100%;
   padding: 5em 0;
   position: fixed;
-  min-height: 50vh;
+  height: auto;
   z-index: 999999;
   bottom: 0; }
-  .edit-task .input-group.flex-container {
+  @media (min-width: 1024px) {
+    .edit-task {
+      min-height: 50vh; } }
+  @media (min-height: 630px) {
+    .edit-task {
+      top: 0;
+      overflow: auto; } }
+  .edit-task .input-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
-    @media (min-width: 1024px) {
-      .edit-task .input-group.flex-container {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-                flex-direction: row; } }
+            flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .edit-task .input-group + .input-group {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+    .edit-task .input-group.flex-container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      @media (min-width: 1024px) {
+        .edit-task .input-group.flex-container {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row; } }
   .edit-task .title {
     font-size: 1.8em;
     color: #767676;
@@ -523,7 +550,12 @@ main {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    width: 65%;
+    margin-top: 3.5em; }
+    @media (max-width: 1023px) {
+      .edit-task .textarea-wrap {
+        width: 100%; } }
     .edit-task .textarea-wrap label {
       font-size: 1.4em;
       color: #424242;
@@ -533,12 +565,12 @@ main {
               order: 1; }
     .edit-task .textarea-wrap textarea {
       border-bottom: 1px solid #9d9d9d;
-      width: 100%;
       max-height: 6em;
       -webkit-box-ordinal-group: 3;
       -webkit-order: 2;
           -ms-flex-order: 2;
-              order: 2; }
+              order: 2;
+      width: 100%; }
       .edit-task .textarea-wrap textarea:focus {
         border-color: #00a2f4; }
         .edit-task .textarea-wrap textarea:focus + label {
@@ -550,4 +582,20 @@ main {
               order: 3;
       -webkit-align-self: flex-end;
           -ms-flex-item-align: end;
-              align-self: flex-end; }
+              align-self: flex-end;
+      margin-top: 3.5em; }
+  .edit-task .add-task-btn {
+    background: #00a2f4;
+    padding: 1.5em 8em;
+    font-size: 1.4em;
+    -webkit-border-radius: 0.5em;
+            border-radius: 0.5em;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase; }
+    @media (min-width: 1024px) {
+      .edit-task .add-task-btn {
+        width: auto;
+        -webkit-align-self: flex-end;
+            -ms-flex-item-align: end;
+                align-self: flex-end; } }
