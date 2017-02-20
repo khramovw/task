@@ -21,6 +21,22 @@
 	border-radius: 50%;
 	font-size: 1em;
 	transform: translateY(55%);
+	
+	& span{
+		display: inline-block;
+    	width: 31px;
+    	height: 4px;
+    	border-radius: 5px;
+    	background: #fff;
+    	position: absolute;
+    	transform: rotate(0deg);
+    	top: 50%;
+    	left: 24%;
+
+		& + span{
+			transform: rotate(90deg);
+		}
+	}
 }
 .user-nav{
 	font-size: 3em;
@@ -163,48 +179,41 @@ main{
 		.task-check-row{
 			width: 90%;
 			input[type="checkbox"]{
-			display: none;
-			& + label{
-			cursor: pointer;
-			opacity: 0.8;
-			font-size: 15px;
-			&::before{
-			content: '';
-			display: inline-block;
-			width: 20px;
-			height: 20px;
-			border-radius: 2px;
-			background: #FFF;
-			box-shadow: 0px 2px 3px rgba(0,0,0,.32) inset;
-			margin-right: 10px;
-		}
-	}
-	&:checked{
-		& + label{
-			&::before{
-				background: #fff url('../img/checboxchecedbg.png') no-repeat;
-				background-position-y: 5px;
-    			background-position-x: 2px;
+				display: none;
+				& + label{
+					cursor: pointer;
+					opacity: 0.8;
+					font-size: 15px;
+					&::before{
+						content: '';
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						border-radius: 2px;
+						background: #FFF;
+						box-shadow: 0px 2px 3px rgba(0,0,0,.32) inset;
+						margin-right: 10px;
+					}
+				}	
+				&:checked{
+					& + label{
+						&::before{
+							background: #fff url('../img/checboxchecedbg.png') no-repeat;
+							background-position-y: 5px;
+    						background-position-x: 2px;
+						}
+					}
+				}
 			}
-		}
-	}
-}
-			// input{
-			// 	display: none;
-			// 	&:checked{
-
-			// 	}
-			// }
-			// label{
-			// 	font-family: 'sf_ui_textlight';
-			// 	padding-left: 5px;
-   //  			font-size: 1em;
-				
-			// }
 		}
 		.task-edit-row{
 			display: flex;
 			justify-content: flex-end;
+			margin-right: 15px;
+			cursor: pointer;
+			.icon-edit{
+				display: block;
+			}
 		}
 	}
 }
