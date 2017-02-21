@@ -276,6 +276,31 @@ main{
 		color: #767676;
 		margin-bottom: 4em;
 	}
+	.closes-edit-task{
+		width: 4em;
+		height: 4em;
+		border-radius: 50%;
+		background: $newTaskBg;
+		position: absolute;
+		top: 3em;
+		right: 4em;
+		cursor: pointer;
+		span{
+			display: block;
+			width: 2px;
+			height: 35px;
+			background: #fff;
+   			border-radius: 10px;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 8%;
+			right: 48%;
+			& + span{
+				transform: rotate(135deg);
+			}
+
+		}
+	}
 	.icon-bell{
 		font-size: 2em;
 		color: $generalColor;
@@ -312,7 +337,7 @@ main{
 		}
 		textarea{
 			border-bottom: 1px solid #9d9d9d;
-			// width: 100%;
+			resize: vertical;
 			max-height: 6em;
 			order: 2;
 			width: 100%;
