@@ -1,0 +1,142 @@
+@import "custom-variables";
+.overlay{
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.83);
+    position: fixed;
+    z-index: 99999;
+}
+.edit-task{
+	background-color: #fff;
+	width: 100%;
+	padding: 5em 0;
+	position: fixed;
+	height: auto;
+	z-index: 999999;
+	bottom: 0;
+	@media (min-width: 1024px){
+		min-height: 50vh;
+	}
+	@media (max-width: 599px) and (max-height: 630px){
+		top: 0;
+		overflow: auto;
+	}
+	.input-group{
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		justify-content: flex-start;
+		& + .input-group{
+			justify-content: flex-end;
+		}
+		&.flex-container{
+			flex-direction: column;
+			@media (min-width: 1024px){
+				flex-direction: row;
+			}
+		}
+	}
+	.title{
+		font-size: 1.8em;
+		color: #767676;
+		margin-bottom: 4em;
+	}
+	.closes-edit-task{
+		width: 4em;
+		height: 4em;
+		border-radius: 50%;
+		background: $newTaskBg;
+		position: absolute;
+		top: 3em;
+		right: 4em;
+		cursor: pointer;
+		@media (max-width: 1023px){
+			position: fixed;
+			top: 1em;
+			right: 2em;
+		}
+		span{
+			display: block;
+			width: 2px;
+			height: 35px;
+			background: #fff;
+   			border-radius: 10px;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 8%;
+			right: 48%;
+			& + span{
+				transform: rotate(135deg);
+			}
+
+		}
+	}
+	.icon-bell{
+		font-size: 2em;
+		color: $generalColor;
+		margin-right: 1.3em;
+	}
+	.task-bell{
+		display: flex;
+		align-items: center;
+		font-size: 1.6em;
+		color: #404040;
+	}
+	input{
+		font-size: 3em;
+		margin-top: 2em;
+		padding-left: 2.3em;
+		@media (min-width: 1024px){
+			margin-top: 0;
+			margin-left: 2em;
+			padding-left: 0;
+		}
+	}
+	.textarea-wrap{
+		display: flex;
+		flex-direction: column;
+		width: 65%;
+		margin-top: 3.5em;
+		@media (max-width: 1023px){
+			width: 100%;
+		}
+		label{
+			font-size: 1.4em;
+			color: #424242;
+			order: 1;
+		}
+		textarea{
+			border-bottom: 1px solid #9d9d9d;
+			resize: vertical;
+			max-height: 6em;
+			order: 2;
+			width: 100%;
+			&:focus{
+				border-color: $generalColor;
+				& + label{
+					color: $generalColor;
+				}
+			}
+		}
+		.symbol-count{
+			order: 3;
+			align-self: flex-end;
+			margin-top: 3.5em;
+		}
+	}
+	.add-task-btn{
+		background: $generalColor;
+		padding: 1.5em 8em;
+		font-size: 1.4em;
+		border-radius: 0.5em;
+		color: #fff;
+		width: 100%;
+		text-transform: uppercase;
+		@media (min-width: 1024px){
+			width: auto;
+			align-self: flex-end;
+		}
+	}
+}
