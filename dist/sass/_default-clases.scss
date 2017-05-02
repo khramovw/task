@@ -1,4 +1,3 @@
-
 @import "custom-variables";
 
 .flex-container{
@@ -13,6 +12,8 @@
 	z-index: 999;
 	background: #fff;
 }
-
+.icon-arrow, .icon-cancel, .icon-edit, label, input{
+	cursor: pointer;
+}
 
 

@@ -183,7 +183,6 @@ main{
 			input[type="checkbox"]{
 				display: none;
 				& + label{
-					cursor: pointer;
 					opacity: 0.8;
 					font-size: 15px;
 					&::before{
@@ -211,7 +210,6 @@ main{
 			display: flex;
 			justify-content: flex-end;
 			margin-right: 15px;
-			cursor: pointer;
 			.icon-edit{
 				display: block;
 			}
