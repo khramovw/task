@@ -332,107 +332,145 @@ main {
     left: 1.8em;
     bottom: 0; }
 
-.task {
-  width: 100%;
-  padding-left: 5.4em;
-  position: relative;
-  max-width: -webkit-calc( 600px + 5.4em);
-  max-width: calc( 600px + 5.4em); }
-  .task.open .task-content-wrap {
-    display: block; }
-  .task.open .task-header {
-    -webkit-border-radius: 1em 1em 0 0;
-            border-radius: 1em 1em 0 0; }
-  .task.success .task-header {
-    background: #7cbb00; }
-  .task.worning .task-header {
-    background: #ff5201; }
-  .task .task-header {
-    padding: 1.5em;
-    background: #ffbb00;
-    -webkit-border-radius: 1em;
-            border-radius: 1em;
-    color: #fff;
-    font-family: 'sf_ui_textlight';
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .task .task-header .short-task-text {
-      width: 80%;
-      font-size: 1.4em;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    .task .task-header .icon-arrow {
-      font-size: .6em; }
-    .task .task-header .icon-cancel {
-      font-size: 2em;
-      margin-top: -8px; }
-  .task .task-content-wrap {
-    display: none;
-    padding: 1.5em;
-    -webkit-border-radius: 0 0 1em 1em;
-            border-radius: 0 0 1em 1em;
-    background: #fff;
-    color: #404040;
-    font-family: 'sf_ui_textlight';
-    font-size: 1.4em;
-    line-height: 1.3em;
-    -webkit-box-shadow: 0px 5px 16px 5px rgba(0, 2, 3, 0.2);
-            box-shadow: 0px 5px 16px 5px rgba(0, 2, 3, 0.2); }
-    .task .task-content-wrap > * + * {
-      margin-top: 1em; }
-    .task .task-content-wrap .task-icon {
-      font-size: 1.43em;
-      width: 20px; }
-    .task .task-content-wrap .time-row {
+.task-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start; }
+  .task-section .task {
+    width: 100%;
+    padding-left: 5.4em;
+    position: relative;
+    max-width: -webkit-calc( 600px + 5.4em);
+    max-width: calc( 600px + 5.4em); }
+    .task-section .task.open .task-content-wrap {
+      display: block; }
+    .task-section .task.open .task-header {
+      -webkit-border-radius: 1em 1em 0 0;
+              border-radius: 1em 1em 0 0; }
+    .task-section .task.success .task-header {
+      background: #7cbb00; }
+    .task-section .task.worning .task-header {
+      background: #ff5201; }
+    .task-section .task .task-header {
+      padding: 1.5em;
+      background: #ffbb00;
+      -webkit-border-radius: 1em;
+              border-radius: 1em;
+      color: #fff;
+      font-family: 'sf_ui_textlight';
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
-      .task .task-content-wrap .time-row .time {
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .task-section .task .task-header .short-task-text {
+        width: 80%;
+        font-size: 1.4em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .task-section .task .task-header .icon-arrow {
+        font-size: .6em; }
+      .task-section .task .task-header .icon-cancel {
+        font-size: 2em;
+        margin-top: -8px; }
+    .task-section .task .task-content-wrap {
+      display: none;
+      padding: 1.5em;
+      -webkit-border-radius: 0 0 1em 1em;
+              border-radius: 0 0 1em 1em;
+      background: #fff;
+      color: #404040;
+      font-family: 'sf_ui_textlight';
+      font-size: 1.4em;
+      line-height: 1.3em;
+      -webkit-box-shadow: 0px 5px 16px 5px rgba(0, 2, 3, 0.2);
+              box-shadow: 0px 5px 16px 5px rgba(0, 2, 3, 0.2); }
+      .task-section .task .task-content-wrap > * + * {
+        margin-top: 1em; }
+      .task-section .task .task-content-wrap .task-icon {
+        font-size: 1.43em;
+        width: 20px; }
+      .task-section .task .task-content-wrap .time-row {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .task-section .task .task-content-wrap .time-row .time {
+          width: 90%;
+          padding-left: 5px; }
+        .task-section .task .task-content-wrap .time-row .task-icon > .icon-bell-active {
+          color: #00a2f4; }
+      .task-section .task .task-content-wrap .task-text-row .text {
         width: 90%;
         padding-left: 5px; }
-    .task .task-content-wrap .task-text-row .text {
-      width: 90%;
-      padding-left: 5px; }
-    .task .task-content-wrap .task-check-row {
-      width: 90%; }
-      .task .task-content-wrap .task-check-row input[type="checkbox"] {
-        display: none; }
-        .task .task-content-wrap .task-check-row input[type="checkbox"] + label {
-          opacity: 0.8;
-          font-size: 15px; }
-          .task .task-content-wrap .task-check-row input[type="checkbox"] + label::before {
-            content: '';
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 1px solid #bebebe;
-            -webkit-border-radius: 50%;
-                    border-radius: 50%;
-            background: #FFF;
-            margin-right: 10px; }
-        .task .task-content-wrap .task-check-row input[type="checkbox"]:checked + label::before {
-          background: #fff url("../img/check.svg") no-repeat;
-          border-color: transparent; }
-    .task .task-content-wrap .task-edit-row {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
-      margin-right: 15px; }
-      .task .task-content-wrap .task-edit-row .icon-edit {
-        display: block; }
+      .task-section .task .task-content-wrap .task-check-row {
+        width: 90%; }
+        .task-section .task .task-content-wrap .task-check-row input[type="checkbox"] {
+          display: none; }
+          .task-section .task .task-content-wrap .task-check-row input[type="checkbox"] + label {
+            opacity: 0.8;
+            font-size: 15px; }
+            .task-section .task .task-content-wrap .task-check-row input[type="checkbox"] + label::before {
+              content: '';
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              border: 1px solid #ff5201;
+              -webkit-border-radius: 50%;
+                      border-radius: 50%;
+              background: #FFF;
+              margin-right: 10px; }
+          .task-section .task .task-content-wrap .task-check-row input[type="checkbox"]:checked + label::before {
+            background: #fff url("../img/check.svg") no-repeat;
+            border-color: transparent; }
+      .task-section .task .task-content-wrap .task-edit-row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        margin-right: 15px; }
+        .task-section .task .task-content-wrap .task-edit-row .icon-edit {
+          display: block; }
+  .task-section .task-status {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 10px 0 0 70px; }
+    .task-section .task-status .status-icon {
+      font-size: 35px;
+      margin-right: 1em; }
+    .task-section .task-status p {
+      font-size: 3em; }
+  .task-section .color-worning {
+    color: #ff5201; }
+  .task-section .color-success {
+    color: #7cbb00; }
+  .task-section .status-on {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
 
 .to-do-time {
   height: 3.3333em;

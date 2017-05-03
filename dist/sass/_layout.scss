@@ -99,123 +99,153 @@ main{
 
 	}
 }
-.task{
-	width: 100%;
-	padding-left: 5.4em;
-	position: relative;
-	max-width: calc( 600px + 5.4em );
+.task-section{
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	.task{
+		width: 100%;
+		padding-left: 5.4em;
+		position: relative;
+		max-width: calc( 600px + 5.4em );
 
-	&.open{
-		.task-content-wrap{
-			display: block;
-		}
-		.task-header{
-		border-radius: 1em 1em 0 0;
-		}
-	}
-	&.success{
-		.task-header{
-			background: $successBg;
-		}
-	}
-	&.worning{
-		.task-header{
-			background: $warningBg;
-		}
-	}
-	.task-header{
-		padding: 1.5em;
-		background: $taskColor;
-		border-radius: 1em;
-		color: #fff;
-		font-family: 'sf_ui_textlight';
-		align-items: center;
-		justify-content: space-between;
-		.short-task-text{
-			width: 80%;
-			font-size: 1.4em;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-		.icon-arrow{
-			font-size: .6em;
-		}
-		.icon-cancel{
-			font-size: 2em;
-			margin-top: -8px;
-		}
-	}
-	.task-content-wrap{
-		display: none;
-		padding: 1.5em;
-		border-radius: 0 0 1em 1em;
-		background: #fff;
-		color: #404040;
-		font-family: 'sf_ui_textlight';
-		font-size: 1.4em;
-		line-height: 1.3em;
-		box-shadow: 0px 5px 16px 5px rgba(0,2,3,.2);
-		& > *{
-			& + *{
-				margin-top: 1em;
+		&.open{
+			.task-content-wrap{
+				display: block;
+			}
+			.task-header{
+				border-radius: 1em 1em 0 0;
 			}
 		}
-		.task-icon{
-			font-size: 1.43em;
-			width: 20px;
+		&.success{
+			.task-header{
+				background: $successBg;
+			}
 		}
-		.time-row{
+		&.worning{
+			.task-header{
+				background: $warningBg;
+			}
+		}
+		.task-header{
+			padding: 1.5em;
+			background: $taskColor;
+			border-radius: 1em;
+			color: #fff;
+			font-family: 'sf_ui_textlight';
 			align-items: center;
-			.time{
-				width: 90%;
-				padding-left: 5px;
+			justify-content: space-between;
+			.short-task-text{
+				width: 80%;
+				font-size: 1.4em;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.icon-arrow{
+				font-size: .6em;
+			}
+			.icon-cancel{
+				font-size: 2em;
+				margin-top: -8px;
 			}
 		}
-		.task-text-row{
-			.text{
-				width: 90%;
-				padding-left: 5px;
+		.task-content-wrap{
+			display: none;
+			padding: 1.5em;
+			border-radius: 0 0 1em 1em;
+			background: #fff;
+			color: #404040;
+			font-family: 'sf_ui_textlight';
+			font-size: 1.4em;
+			line-height: 1.3em;
+			box-shadow: 0px 5px 16px 5px rgba(0,2,3,.2);
+			& > *{
+				& + *{
+					margin-top: 1em;
+				}
 			}
-		}
-		.task-check-row{
-			width: 90%;
-			input[type="checkbox"]{
-				display: none;
-				& + label{
-					opacity: 0.8;
-					font-size: 15px;
-					&::before{
-						content: '';
-						display: inline-block;
-						width: 20px;
-						height: 20px;
-						border: 1px solid #bebebe;
-						border-radius: 50%;
-						background: #FFF;
-						margin-right: 10px;
-					}
-				}	
-				&:checked{
+			.task-icon{
+				font-size: 1.43em;
+				width: 20px;
+			}
+			.time-row{
+				align-items: center;
+				.time{
+					width: 90%;
+					padding-left: 5px;
+				}
+				.task-icon > .icon-bell-active{
+					color: $generalColor;
+				}
+			}
+			.task-text-row{
+				.text{
+					width: 90%;
+					padding-left: 5px;
+				}
+			}
+			.task-check-row{
+				width: 90%;
+				input[type="checkbox"]{
+					display: none;
 					& + label{
+						opacity: 0.8;
+						font-size: 15px;
 						&::before{
-							background: #fff url('../img/check.svg') no-repeat;
-							border-color: transparent;
+							content: '';
+							display: inline-block;
+							width: 20px;
+							height: 20px;
+							border: 1px solid $warningBg;
+							border-radius: 50%;
+							background: #FFF;
+							margin-right: 10px;
+						}
+					}
+					&:checked{
+						& + label{
+							&::before{
+								background: #fff url('../img/check.svg') no-repeat;
+								border-color: transparent;
+							}
 						}
 					}
 				}
 			}
-		}
-		.task-edit-row{
-			display: flex;
-			justify-content: flex-end;
-			margin-right: 15px;
-			.icon-edit{
-				display: block;
+			.task-edit-row{
+				display: flex;
+				justify-content: flex-end;
+				margin-right: 15px;
+				.icon-edit{
+					display: block;
+				}
 			}
 		}
 	}
+	.task-status{
+		display: none;
+		flex-direction: row;
+		margin: 10px 0 0 70px;
+		& .status-icon{
+			font-size: 35px;
+			margin-right: 1em;
+		}
+		& p{
+			font-size: 3em;
+		}
+	}
+	.color-worning{
+		color: $warningBg;
+	}
+	.color-success{
+		color: $successBg;
+	}
+	.status-on{
+		display: flex;
+	}
 }
+
 .to-do-time{
 	height: 3.3333em;
 	width: 3.3333em;
