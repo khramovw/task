@@ -346,12 +346,25 @@ main {
   -webkit-align-items: start;
       -ms-flex-align: start;
           align-items: start; }
+  @media (max-width: 768px) {
+    .task-section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column wrap;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap; } }
   .task-section .task {
     width: 100%;
     padding-left: 5.4em;
     position: relative;
     max-width: -webkit-calc( 600px + 5.4em);
     max-width: calc( 600px + 5.4em); }
+    @media (max-width: 768px) {
+      .task-section .task {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2; } }
     .task-section .task.open .task-content-wrap {
       display: block; }
     .task-section .task.open .task-header {
@@ -457,11 +470,23 @@ main {
         -ms-flex-direction: row;
             flex-direction: row;
     margin: 10px 0 0 70px; }
+    @media (max-width: 768px) {
+      .task-section .task-status {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1; } }
     .task-section .task-status .status-icon {
-      font-size: 35px;
+      font-size: 3.5em;
       margin-right: 1em; }
+      @media (max-width: 768px) {
+        .task-section .task-status .status-icon {
+          font-size: 2em; } }
     .task-section .task-status p {
       font-size: 3em; }
+      @media (max-width: 768px) {
+        .task-section .task-status p {
+          font-size: 2em; } }
   .task-section .color-worning {
     color: #ff5201; }
   .task-section .color-success {
@@ -743,7 +768,7 @@ main {
         border-color: #00a2f4; }
         .login .login-section .login-input input:focus + label {
           opacity: 1; }
-        .login .login-section .login-input input:focus > .login-icon > .icon {
+        .login .login-section .login-input input:focus > .login-icon {
           color: #00a2f4; }
     .login .login-section .login-input:hover .login-icon > .icon {
       color: #00a2f4; }
