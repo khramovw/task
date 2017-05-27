@@ -101,7 +101,8 @@ main{
 	display: flex;
 	flex-direction: row;
 	align-items: start;
-	@media (max-width: 768px) {
+	margin-bottom: 50px;
+	@media (max-width: 1198px) {
 		flex-flow: column wrap;
 	}
 	.task{
@@ -110,7 +111,7 @@ main{
 		position: relative;
 		max-width: calc( 600px + 5.4em );
 		@media(max-width: 768px) {
-			order: 2;
+			order: 1;
 		}
 		&.open{
 			.task-content-wrap{
@@ -150,7 +151,7 @@ main{
 			}
 			.icon-cancel{
 				font-size: 2em;
-				margin-top: -8px;
+				//margin-top: -8px;
 			}
 		}
 		.task-content-wrap{
@@ -229,9 +230,12 @@ main{
 	.task-status{
 		display: none;
 		flex-direction: row;
-		margin: 10px 0 0 70px;
-		@media(max-width: 768px) {
-			order: 1;
+		margin: 1em 0 0 7em;
+		max-width: calc( 555px + 5.4em);
+
+		@media(max-width: 1198px) {
+			order: 2;
+			margin: 2em 0 -3em 5.7em;
 		}
 		& .status-icon{
 			font-size: 3.5em;
